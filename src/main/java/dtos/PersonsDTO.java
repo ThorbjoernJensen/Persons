@@ -1,5 +1,8 @@
 package dtos;
 
+import entities.Person;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class PersonsDTO {
@@ -18,4 +21,7 @@ public class PersonsDTO {
         this.all = all;
     }
 
+    public List<PersonDTO> getAll() {
+        return all;
+    }
 }

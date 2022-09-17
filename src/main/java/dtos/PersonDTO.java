@@ -2,6 +2,9 @@ package dtos;
 
 import entities.Person;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PersonDTO {
 //    {"fName":"Kurt","lName":"Wonnegut", phone:"12345678","id":0}
 
@@ -39,5 +42,11 @@ public class PersonDTO {
 
     public String getPhone() {
         return phone;
+    }
+
+    public static List<PersonDTO> getDTOList(List<Person> personList) {
+        List<PersonDTO> personDTOList = new ArrayList<>();
+        personList.forEach(person -> personDTOList.add(new PersonDTO(person)));
+        return personDTOList;
     }
 }

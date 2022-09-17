@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@NamedQuery(name = "Person.deleteAllRows", query = "DELETE from Person")
 @Table(name = "person")
 public class Person {
     @Id
